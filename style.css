@@ -4,7 +4,6 @@
    Responsive Dark Theme
 ========================================================= */
 
-
 /* =========================
    RESET
 ========================= */
@@ -43,6 +42,11 @@ a {
 img {
     display: block;
     max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 section {
@@ -97,6 +101,7 @@ body::before {
 }
 
 .nav-container {
+    width: 100%;
     max-width: 1180px;
 
     margin: auto;
@@ -111,6 +116,8 @@ body::before {
 }
 
 .logo {
+    flex-shrink: 0;
+
     font-size: 1.15rem;
     font-weight: 800;
 
@@ -124,6 +131,7 @@ body::before {
 .desktop-nav {
     display: flex;
     align-items: center;
+
     gap: 25px;
 }
 
@@ -133,7 +141,9 @@ body::before {
     font-size: 0.82rem;
     font-weight: 500;
 
-    transition: 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .desktop-nav a:hover {
@@ -141,6 +151,8 @@ body::before {
 }
 
 .resume-button {
+    flex-shrink: 0;
+
     display: inline-flex;
 
     align-items: center;
@@ -160,12 +172,17 @@ body::before {
     font-size: 0.78rem;
     font-weight: 600;
 
-    transition: 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .resume-button:hover {
     border-color: #8c70ff;
+
     background: rgba(60, 48, 100, 0.4);
+
     transform: translateY(-2px);
 }
 
@@ -199,7 +216,9 @@ body::before {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(300px, 0.75fr);
 
     align-items: center;
 
@@ -212,6 +231,7 @@ body::before {
 ========================= */
 
 .hero-content {
+    width: 100%;
     max-width: 690px;
 }
 
@@ -247,11 +267,15 @@ body::before {
     width: 6px;
     height: 6px;
 
+    flex-shrink: 0;
+
     border-radius: 50%;
 
     background: #9177ff;
 
-    box-shadow: 0 0 12px rgba(145, 119, 255, 0.9);
+    box-shadow:
+        0 0 12px
+        rgba(145, 119, 255, 0.9);
 }
 
 .intro-text {
@@ -296,7 +320,11 @@ body::before {
 
     color: #e0e4ec;
 
-    font-size: clamp(1.25rem, 2.3vw, 1.75rem);
+    font-size: clamp(
+        1.25rem,
+        2.3vw,
+        1.75rem
+    );
 
     line-height: 1.4;
 
@@ -307,6 +335,7 @@ body::before {
 
 .hero h2 strong {
     color: #a99aff;
+
     font-weight: 600;
 }
 
@@ -353,7 +382,11 @@ body::before {
     font-size: 0.82rem;
     font-weight: 700;
 
-    transition: 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
 }
 
 .primary-button {
@@ -426,13 +459,19 @@ body::before {
     font-size: 0.65rem;
     font-weight: 700;
 
-    transition: 0.2s ease;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
 .social-icon:hover {
     color: white;
 
     border-color: #7565e8;
+
+    background: rgba(45, 38, 80, 0.5);
 
     transform: translateY(-3px);
 }
@@ -458,8 +497,7 @@ body::before {
 
 
 /*
-   IMPORTANT:
-   The photo itself is intentionally small.
+   PHOTO FRAME
 */
 
 .profile-frame {
@@ -489,7 +527,7 @@ body::before {
 
 
 /*
-   FORCE IMAGE TO BE CIRCULAR
+   CIRCULAR IMAGE
 */
 
 .profile-frame img {
@@ -525,6 +563,8 @@ body::before {
     background: rgba(95, 90, 255, 0.18);
 
     filter: blur(55px);
+
+    pointer-events: none;
 }
 
 .orbit {
@@ -565,6 +605,8 @@ body::before {
 
     box-shadow:
         0 0 12px #8972ff;
+
+    pointer-events: none;
 }
 
 .dot-a {
@@ -593,6 +635,7 @@ body::before {
 ========================= */
 
 .section {
+    width: 100%;
     max-width: 1180px;
 
     margin: auto;
@@ -614,7 +657,8 @@ body::before {
         );
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.14);
+        0 20px 50px
+        rgba(0, 0, 0, 0.14);
 
     overflow: hidden;
 }
@@ -682,7 +726,8 @@ body::before {
 .about-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
     margin-top: 25px;
 
@@ -773,7 +818,10 @@ body::before {
 
     font-size: 0.8rem;
 
-    transition: 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
 }
 
 .skill-pill:hover {
@@ -789,6 +837,8 @@ body::before {
 .skill-symbol {
     width: 26px;
     height: 26px;
+
+    flex-shrink: 0;
 
     display: flex;
 
@@ -886,12 +936,17 @@ body::before {
 
     font-weight: 600;
 
-    transition: 0.2s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .view-project-button:hover {
     background:
         rgba(105, 65, 180, 0.12);
+
+    border-color: #8060c8;
 
     transform: translateY(-2px);
 }
@@ -899,7 +954,9 @@ body::before {
 .project-body {
     display: grid;
 
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
 
     gap: 30px;
 
@@ -949,6 +1006,8 @@ body::before {
 .preview-dot {
     width: 6px;
     height: 6px;
+
+    flex-shrink: 0;
 
     border-radius: 50%;
 
@@ -1077,7 +1136,8 @@ body::before {
 .project-highlights {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
     gap: 8px;
 
@@ -1134,7 +1194,7 @@ body::before {
 .experience-item {
     display: grid;
 
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 48px minmax(0, 1fr);
 
     gap: 17px;
 
@@ -1182,6 +1242,10 @@ body::before {
     gap: 20px;
 }
 
+.experience-content {
+    min-width: 0;
+}
+
 .experience-content h3 {
     font-size: 0.95rem;
 
@@ -1222,7 +1286,8 @@ body::before {
 .education-grid {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 14px;
 }
@@ -1238,7 +1303,9 @@ body::before {
     background:
         rgba(19, 25, 35, 0.75);
 
-    transition: 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .education-card:hover {
@@ -1276,6 +1343,7 @@ body::before {
 .contact-section {
     position: relative;
 
+    width: 100%;
     max-width: 850px;
 
     margin: 65px auto 80px;
@@ -1330,7 +1398,11 @@ body::before {
 .contact-section h2 {
     position: relative;
 
-    font-size: clamp(2.3rem, 5vw, 3.7rem);
+    font-size: clamp(
+        2.3rem,
+        5vw,
+        3.7rem
+    );
 
     line-height: 1.1;
 
@@ -1369,6 +1441,7 @@ body::before {
 ========================= */
 
 footer {
+    width: 100%;
     max-width: 1180px;
 
     margin: auto;
@@ -1412,6 +1485,12 @@ footer {
 
     .hero-content {
         margin: auto;
+    }
+
+    .hero h2,
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
@@ -1478,6 +1557,12 @@ footer {
 
     .nav-container {
         padding: 13px 17px;
+
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 
     .desktop-nav {
@@ -1547,6 +1632,10 @@ footer {
         letter-spacing: 0.3px;
     }
 
+    .intro-text {
+        font-size: 0.92rem;
+    }
+
     .hero h1 {
         font-size: 2.8rem;
 
@@ -1557,10 +1646,14 @@ footer {
 
     .hero h2 {
         font-size: 1.15rem;
+
+        line-height: 1.45;
     }
 
     .hero-description {
         font-size: 0.78rem;
+
+        line-height: 1.7;
     }
 
     .hero-buttons {
@@ -1574,9 +1667,36 @@ footer {
         width: 100%;
     }
 
+    .social-links {
+        gap: 9px;
+    }
+
     .section {
         padding:
             32px 17px;
+    }
+
+    .section-title,
+    .section-heading {
+        gap: 11px;
+    }
+
+    .section-icon,
+    .section-heading-icon {
+        width: 39px;
+        height: 39px;
+
+        font-size: 1rem;
+    }
+
+    .section-title h2,
+    .section-heading h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-title p,
+    .section-heading p {
+        font-size: 0.65rem;
     }
 
     .about-card,
@@ -1584,10 +1704,19 @@ footer {
         padding: 20px;
     }
 
+    .about-item {
+        padding:
+            21px 5px;
+    }
+
     .project-header {
         flex-direction: column;
 
         align-items: flex-start;
+    }
+
+    .project-body {
+        gap: 22px;
     }
 
     .project-highlights {
@@ -1599,6 +1728,10 @@ footer {
 
         padding:
             23px 20px;
+    }
+
+    .experience-marker {
+        margin-bottom: -3px;
     }
 
     .experience-top {
@@ -1623,6 +1756,15 @@ footer {
             60px 18px;
     }
 
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons .primary-button,
+    .contact-buttons .secondary-button {
+        width: 100%;
+    }
+
     footer {
         flex-direction: column;
 
@@ -1638,6 +1780,15 @@ footer {
 ========================================================= */
 
 @media (max-width: 400px) {
+
+    .nav-container {
+        padding:
+            12px 14px;
+    }
+
+    .logo {
+        font-size: 0.92rem;
+    }
 
     .resume-button {
         padding:
@@ -1682,5 +1833,34 @@ footer {
             0 11px;
 
         font-size: 0.73rem;
+    }
+
+    .skill-symbol {
+        width: 24px;
+        height: 24px;
+    }
+
+    .project-tags span {
+        font-size: 0.61rem;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
