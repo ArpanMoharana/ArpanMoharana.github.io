@@ -143,11 +143,22 @@ body::before {
 
     transition:
         color 0.2s ease,
+        border-bottom 0.2s ease,
         transform 0.2s ease;
 }
 
 .desktop-nav a:hover {
     color: #ffffff;
+}
+
+/* =========================
+   ACTIVE NAV
+========================= */
+
+.desktop-nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #8b72ff;
+    padding-bottom: 2px;
 }
 
 .resume-button {
@@ -495,11 +506,6 @@ body::before {
     justify-content: center;
 }
 
-
-/*
-   PHOTO FRAME
-*/
-
 .profile-frame {
     position: relative;
 
@@ -524,11 +530,6 @@ body::before {
         0 0 45px
         rgba(100, 90, 255, 0.18);
 }
-
-
-/*
-   CIRCULAR IMAGE
-*/
 
 .profile-frame img {
     width: 100%;
@@ -857,41 +858,15 @@ body::before {
     font-weight: 800;
 }
 
-.python-symbol {
-    color: #f1c94b;
-}
-
-.sql-symbol {
-    color: #5da2ff;
-}
-
-.r-symbol {
-    color: #68adff;
-}
-
-.ml-symbol {
-    color: #ff9d52;
-}
-
-.tensorflow-symbol {
-    color: #ff963e;
-}
-
-.pytorch-symbol {
-    color: #ff7350;
-}
-
-.langchain-symbol {
-    color: #92a3ff;
-}
-
-.mongo-symbol {
-    color: #55c979;
-}
-
-.chroma-symbol {
-    color: #b27aff;
-}
+.python-symbol { color: #f1c94b; }
+.sql-symbol { color: #5da2ff; }
+.r-symbol { color: #68adff; }
+.ml-symbol { color: #ff9d52; }
+.tensorflow-symbol { color: #ff963e; }
+.pytorch-symbol { color: #ff7350; }
+.langchain-symbol { color: #92a3ff; }
+.mongo-symbol { color: #55c979; }
+.chroma-symbol { color: #b27aff; }
 
 
 /* =========================
@@ -1579,10 +1554,6 @@ footer {
 
         gap: 30px;
     }
-
-    /*
-       SMALL MOBILE PHOTO
-    */
 
     .hero-photo-container {
         width: 230px;
